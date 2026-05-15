@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: crop-app
+    runtime: python
+    pythonVersion: 3.11.8
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn crop_project.wsgi:application
